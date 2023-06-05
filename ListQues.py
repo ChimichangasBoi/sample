@@ -13,10 +13,39 @@ def swapElement(l, pos1, pos2):
     l[pos2]=temp
     return l
 
-k = [5,4,3,2,1]
+k = [1,2,3,4,5]
 pos1= 1
 pos2=3
 
-k.sort()
  
 print(swapElement(k, pos1, pos2))
+
+#max element
+def Max(k):
+ 
+    max = k[0] #assuming any element to be max then comparing with every element
+
+    for x in k:
+        if x > max:
+            max = x
+ 
+    
+    return max
+ 
+
+print("Largest element is:", Max(k))
+
+#min element
+def Min(k):
+ 
+    min = k[0]
+
+    for x in k:
+        if x < min:
+            min = x
+ 
+    
+    return min
+ 
+
+print("smallest element is:", min(k))
