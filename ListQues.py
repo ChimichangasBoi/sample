@@ -7,51 +7,44 @@ Write function for following opeartions :
 4. Check if list is sorted in ascending order. --> True
 """
 
+#did some changes from scratch as there were some indention error
+#sorting algo is not implementing correctly I'll do it tomorrow
 def swapElement(l, pos1, pos2):
-    temp=l[pos1]
-    l[pos1]=l[pos2]
-    l[pos2]=temp
+    temp = l[pos1]
+    l[pos1] = l[pos2]
+    l[pos2] = temp
     return l
 
-k = [5,4,3,2,1]
-pos1= 1
-pos2=3
-
-k.sort
-
+k = [1,2,3,4,5]
+pos1 = 1
+pos2 = 3
 
 print(swapElement(k, pos1, pos2))
 
-#max element
 def Max(k):
- 
-    max = k[0] #assuming any element to be max then later get compared with other values for battle of death
+    if not k:  
+        print("List is empty")
+        
 
-    for x in k:
-        if x > max:
-            max = x
- 
-    
+    max = k[0]
+    for ele in k:
+        if ele > max:
+            max = ele
     return max
- 
-print("Largest element is:", Max(k))
 
-#min element
 def Min(k):
- 
+    if not k:  
+        print("List is empty")
+       
+
     min = k[0]
-
-    for x in k:
-        if x < min:
-            min = x
- 
-    
+    for ele in k:
+        if ele < min:
+            min = ele
     return min
- 
-print("smallest element is:", Min(k))
 
-
-print(bool(k.sort))
+print("Largest element is:", Max(k))
+print("Smallest element is:", Min(k))
 
 
 
