@@ -47,12 +47,10 @@ def Min(k):
 print("Largest element is:", Max(k))
 print("Smallest element is:", Min(k))
 
-for i in range(len(k)):
-    for j in range(i +1 , len(k)):
-
+for i in range(len(k)): 
+    for j in range(i +1 , len(k)):  #using a nested loop to iterate each number in the list
         if k[i] > k[j]:
-            k[i], k[j] = k[j], k[i]
-
+            k[i], k[j] = k[j], k[i] #to sort in ascending order I'm using bubble sort where I'm comparing the current element with the one after it swapping their values if needed
 print(k)
 
 
