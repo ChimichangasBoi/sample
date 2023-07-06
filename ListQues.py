@@ -7,16 +7,52 @@ Write function for following opeartions :
 4. Check if list is sorted in ascending order. --> True
 """
 
+#did some changes from scratch as there were some indention error
+#sorting algo is not implementing correctly I'll do it tomorrow
+
 def swapElement(l, pos1, pos2):
-    temp=l[pos1]
-    l[pos1]=l[pos2]
-    l[pos2]=temp
+    temp = l[pos1]
+    l[pos1] = l[pos2]
+    l[pos2] = temp
     return l
 
 k = [5,4,3,2,1]
-pos1= 1
-pos2=3
+pos1 = 1
+pos2 = 3
 
-k.sort()
- 
 print(swapElement(k, pos1, pos2))
+
+def Max(k):
+    if not k:  
+        print("List is empty")
+        
+
+    max = k[0]
+    for ele in k:
+        if ele > max:
+            max = ele
+    return max
+
+def Min(k):
+    if not k:  
+        print("List is empty")
+       
+
+    min = k[0]
+    for ele in k:
+        if ele < min:
+            min = ele
+    return min
+
+print("Largest element is:", Max(k))
+print("Smallest element is:", Min(k))
+
+for i in range(len(k)): 
+    for j in range(i +1 , len(k)):  #using a nested loop to iterate each number in the list
+        if k[i] > k[j]:
+            k[i], k[j] = k[j], k[i] #to sort in ascending order I'm using bubble sort where I'm comparing the current element with the one after it swapping their values if needed
+print(k)
+
+
+
+
