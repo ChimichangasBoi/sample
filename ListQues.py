@@ -7,10 +7,10 @@ Write function for following opeartions :
 4. Check if list is sorted in ascending order. --> True
 """
 
+
 #1. Swap any 2 elements of which indexes are passed eg 0, 4 --> 5,2,3,4,1
 #using 3rd variable
-
-def swapPos(l, pos1, pos2):
+def swapElement(l, pos1, pos2):
     temp=l[pos1]
     l[pos1]=l[pos2]
     l[pos2]=temp
@@ -21,6 +21,5 @@ pos1= 1
 pos2=3
 
 k.sort()
- 
-print(swapPos(k, pos1, pos2))
 
+print(swapElement(k, pos1, pos2))
