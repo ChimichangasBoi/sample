@@ -7,8 +7,24 @@ Write function for following opeartions :
 4. Check if list is sorted in ascending order. --> True
 """
 
-#did some changes from scratch as there were some indention error
-#sorting algo is not implementing correctly I'll do it tomorrow
+
+#Make this as a function named sortList() which takes
+#list as a parameter
+#'ASC' or 'DESC' as parameter to decide sorting order
+#It returns same list with sorted values based on ASC or DESC value provided
+def sortList(lst, order): #bubble sorting
+    if order == 'ASC': 
+        for i in range(len(lst)): #lst refers to the list to be sorted
+            for j in range(i + 1, len(lst)): 
+                if lst[i] > lst[j]:
+                    lst = swapElement(lst, i, j)
+    elif order == 'DESC': #f the previous condition was not true, then this condition will be in work
+        for i in range(len(lst)): 
+            for j in range(i + 1, len(lst)): 
+                if lst[i] < lst[j]:
+                    lst = swapElement(lst, i, j)
+    else:
+        print("error")
 
 def swapElement(l, pos1, pos2):
     temp = l[pos1]
@@ -21,6 +37,9 @@ pos1 = 1
 pos2 = 3
 
 print(swapElement(k, pos1, pos2))
+
+print("Sorted in ASC order:", sortList(k.copy(), 'ASC')) #copy() returns a copy of the specified list
+print("Sorted in DESC order:", sortList(k.copy(), 'DESC'))
 
 def Max(k):
     if not k:  
