@@ -8,9 +8,6 @@ Write function for following opeartions :
 """
 
 
-#Make this as a function named sortList() which takes
-#list as a parameter
-#'ASC' or 'DESC' as parameter to decide sorting order
 #It returns same list with sorted values based on ASC or DESC value provided
 def sortList(lst, order): #bubble sorting
     if order == 'ASC': 
@@ -26,6 +23,10 @@ def sortList(lst, order): #bubble sorting
     else:
         print("error")
 
+
+#1. Swap any 2 elements of which indexes are passed eg 0, 4 --> 5,2,3,4,1
+#using 3rd variable
+
 def swapElement(l, pos1, pos2):
     temp = l[pos1]
     l[pos1] = l[pos2]
@@ -35,6 +36,7 @@ def swapElement(l, pos1, pos2):
 k = [5,4,3,2,1]
 pos1 = 1
 pos2 = 3
+
 
 print(swapElement(k, pos1, pos2))
 
@@ -65,13 +67,6 @@ def Min(k):
 
 print("Largest element is:", Max(k))
 print("Smallest element is:", Min(k))
-
-for i in range(len(k)): 
-    for j in range(i +1 , len(k)):  #using a nested loop to iterate each number in the list
-        if k[i] > k[j]:
-            k[i], k[j] = k[j], k[i] #to sort in ascending order I'm using bubble sort where I'm comparing the current element with the one after it swapping their values if needed
-print(k)
-
 
 
 
